@@ -30,9 +30,17 @@ function randColor(){
 	return ret;
 }
 
+var prevColor = '';
+var prevRand = 0;
 function f(){
-	document.body.style.backgroundColor=randColor();
+	var color = randColor();
+	while(color == prevColor)
+		color = randColor();
+	document.body.style.backgroundColor=color;
+	
 	var rand = randInt(5)+1;
+	while(rand == prevRand)
+		rand = randInt(5)+1;
 	document.getElementById("img_a").src = 'pics/'+rand+'a.jpg';
 	document.getElementById("img_b").src = 'pics/'+rand+'b.jpg';
 }
