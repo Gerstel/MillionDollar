@@ -14,7 +14,7 @@
 </head>
 <body>
 <div class="wr" id="wr">
-<button class="btn" id="btn" onclick="f()">$$$$$$$$$$$</button>
+<button class="btn" id="btn" onclick="f()">$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$</button>
 </div>
 <div>
 <table>
@@ -51,12 +51,12 @@ function f(){
 		color = randColor();
 	document.body.style.backgroundColor=color;
 	
-	var rand = randInt(5)+1;
+	var rand = randInt(10)+1;
 	while(rand == prevRand)
-		rand = randInt(5)+1;
+		rand = randInt(10)+1;
 	var ays = document.getElementsByClassName("img_a");
 	for(var i=0;i<ays.length;i++)
-		ays[i].src = 'pics/'+rand+'a.jpg';
+		ays[i].src = 'pics/'+rand+'.jpg';
 }
 
 f();
