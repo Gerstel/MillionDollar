@@ -1,0 +1,42 @@
+<head>
+<style>
+#wr{
+	height:500px;
+	width:500px;
+}
+.btn{
+	position:relative;
+	left:50%;
+	font: 20px arial, sans-serif;
+}
+</style>
+</head>
+<body>
+<img id ='img_a' width='400' height='300' src = '' />
+<img id ='img_b'  width='400' height='300' src = '' />
+<div class="wr" id="wr">
+<button class="btn" id="btn" onclick="f()">$$$$$$$$$$$</button>
+</div>
+<script>
+function randInt(max){
+	return Math.floor(Math.random() * max);
+}
+function randColor(){
+	var opt="0123456789ABCDEF";
+	ret="#";
+	for(i=0;i<6;i++){
+		ret+=opt[randInt(15)];
+	}
+	return ret;
+}
+
+function f(){
+	document.body.style.backgroundColor=randColor();
+	var rand = randInt(5)+1;
+	document.getElementById("img_a").src = 'pics/'+rand+'a.jpg';
+	document.getElementById("img_b").src = 'pics/'+rand+'b.jpg';
+}
+
+f();
+</script>
+</body>
